@@ -352,14 +352,11 @@ const server = http.createServer(async (req, res) => {
             // ... dentro de tu ruta /buscar
             browser = await puppeteer.launch({
                 headless: "new",
-                executablePath: '/usr/bin/google-chrome',
                 args: [
                     '--no-sandbox',
                     '--disable-setuid-sandbox',
                     '--disable-dev-shm-usage',
-                    '--disable-gpu',
-                    '--no-zygote',
-                    '--single-process'
+                    '--disable-gpu'
                 ]
             });
             
